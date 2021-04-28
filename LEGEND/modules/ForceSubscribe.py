@@ -211,3 +211,4 @@ Note: /FSub is an LEGENDBOT of /ForceSubscribe
 💭 Only on LEGENDBOT yet
  
 """
+__mod_name__ = "Force Subscribe"
