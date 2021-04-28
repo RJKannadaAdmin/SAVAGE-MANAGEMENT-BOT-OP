@@ -65,12 +65,13 @@ from LEGEND.modules.helper_funcs.misc import paginate_modules
 from LEGEND.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """                   
-Hello there, I'm [Anji Kiccha ⚔](https://telegra.ph/file/a480f899438b4f8fd0f8f.jpg)
-I am an anime Themed Group Managing Bot and I will help in managing your group\n
+Hello there, I'm 𝑨𝒏𝒋𝒊 𝑲𝒊𝒄𝒄𝒉𝒂 ⚔
+
+I am an Anime Themed Group Managing Bot and I will help in managing your group\n
 
 ✪ Make sure you read *INFO* Section Below ✪ \n
 
-Developed By - [Hacker](t.me/TheHacker90)
+Devel[o](https://telegra.ph/file/a480f899438b4f8fd0f8f.jpg))ped By - [Hacker](t.me/TheHacker90)
 """
               
 buttons = [
@@ -82,7 +83,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="⚔ Add Aиנι κιϲϲнα to your group ⚔",
+            text="⚔ Add Aɴᴊɪ Kɪᴄᴄʜᴀ to your group ⚔",
             url="t.me/AnjiKicchaWlmBot?startgroup=true",
         ),
     ],
