@@ -100,7 +100,7 @@ def _check_member(client, message):
             except UserNotParticipant:
                 try:
                     sent_message = message.reply_text(
-                        "Hey  {} 🙏 \n \n **please join @{} Channel ** 😭 \n and press**UNMUTE ME** Button touch. \n \n **[👉 OUR CHANNEL 👈](https://t.me/{})**".format(
+                        "Welcome {} 🙏 \n **You havent joined our @{} Channel yet** 😭 \n \nPlease Join [Our Channel](https://t.me/{}) and hit the **UNMUTE ME** Button. \n \n ".format(
                             message.from_user.mention, channel, channel
                         ),
                         disable_web_page_preview=True,
@@ -108,9 +108,15 @@ def _check_member(client, message):
                             [
                                 [
                                     InlineKeyboardButton(
+                                        "Join Channel",
+                                        url="https://t.me/{}".format(channel),
+                                    )
+                                ],
+                                [
+                                    InlineKeyboardButton(
                                         "UnMute Me", callback_data="onUnMuteRequest"
                                     )
-                                ]
+                                ],
                             ]
                         ),
                     )
