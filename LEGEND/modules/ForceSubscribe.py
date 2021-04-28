@@ -99,8 +99,8 @@ def _check_member(client, message):
                 client.get_chat_member(channel, user_id)
             except UserNotParticipant:
                 try:
-                    sent_message = message.reply_text(
-                        "ಕ್ಷಮಿಸಿ {} 🙏 \n \n ** ನೀವು ಇನ್ನು ನಮ್ಮ  @{} Channel ಗೆ ಸೇರಿಕೊಂಡಿಲ್ಲ ** 😭 \n \n ದಯವಿಟ್ಟು ನಮ್ಮ ಚಾನಲ್ ಸೇರಿಕೊಳ್ಳಿ ಮತ್ತು ಕೆಳಗೆ ಕಾಣುತ್ತಿರುವ **UNMUTE ME** ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡಿ. \n \n **[👉Join OUR CHANNEL 👈](https://t.me/{})**".format(
+                   sent_message = message.reply_text(
+                        "ಕ್ಷಮಿಸಿ {} 🙏 \n\n ** ನೀನು ಇನ್ನು ನಮ್ಮ @{} Channel ಚಾನಲ್ ಗೆ ಸೇರಿಕೊಂಡಿಲ್ಲ**  \n \nದಯವಿಟ್ಟು ನಮ್ಮ [Channel](https://t.me/{}) ಸೇರಿಕೊಳ್ಳಿ ಮತ್ತು ಕೆಳಗೆ ಕಾಣುತ್ತಿರುವ **UNMUTE ME** ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡಿ... \n \n ".format(
                             message.from_user.mention, channel, channel
                         ),
                         disable_web_page_preview=True,
@@ -108,9 +108,15 @@ def _check_member(client, message):
                             [
                                 [
                                     InlineKeyboardButton(
+                                        "Join Channel",
+                                        url="https://t.me/{}".format(channel),
+                                    )
+                                ],
+                                [
+                                    InlineKeyboardButton(
                                         "UnMute Me", callback_data="onUnMuteRequest"
                                     )
-                                ]
+                                ],
                             ]
                         ),
                     )
