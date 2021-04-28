@@ -420,7 +420,7 @@ def LEGEND_about_callback(update, context):
     elif query.data == "aboutmanu_credit":
         query.message.edit_text(
             text=f"*{dispatcher.bot.first_name} Is the redisigned version of Daisy and Naruto for the best performance.*"
-            f"\n\nBased on [Saithama Robot](https://github.com/Godzilla-0/Suzuya_ProBot)."
+            f"\n\nBased on [Suzuya Bot](https://github.com/Godzilla-0/Suzuya_ProBot)."
             f"\n\n{dispatcher.bot.first_name}'s source code was rewritten by @TheHacker90"
             f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @AnjiKicchaGroup.",
             parse_mode=ParseMode.MARKDOWN,
