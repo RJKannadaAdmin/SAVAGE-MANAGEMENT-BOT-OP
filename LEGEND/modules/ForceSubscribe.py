@@ -56,7 +56,7 @@ def _onUnMuteRequest(client, cb):
                 except UserNotParticipant:
                     client.answer_callback_query(
                         cb.id,
-                        text=f"❗ Hey @{channel} its  my channel  Join and press 'UnMute Me' button.",
+                        text=f"❗ Hey Join @{channel} channel and press 'UnMute Me' button.",
                         show_alert=True,
                     )
             else:
@@ -78,7 +78,7 @@ def _onUnMuteRequest(client, cb):
             else:
                 client.answer_callback_query(
                     cb.id,
-                    text="❗ press unmute me button and chat.",
+                    text="❗This Button Isn't For You , Idiot 🤬.",
                     show_alert=True,
                 )
 
