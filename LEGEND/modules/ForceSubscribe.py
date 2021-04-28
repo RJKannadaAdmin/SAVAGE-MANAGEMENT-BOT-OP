@@ -211,3 +211,4 @@ Note: /FSub is an LEGENDBOT of /ForceSubscribe
 💭 Only on Anji Kiccha Yet
  
 """
+__mod_name__ = "F SUB"
