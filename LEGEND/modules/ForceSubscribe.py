@@ -207,8 +207,9 @@ Note: Only creator of the group can setup me and i will not allow force subscrib
 ✪ /ForceSubscribe no/off/disable - To turn of ForceSubscribe.
 ✪ /ForceSubscribe {channel username} - To turn on and setup the channel.
 ✪ /ForceSubscribe clear - To unmute all members who muted by me.
-Note: /FSub is an LEGENDBOT of /ForceSubscribe
-💭 Only on Anji Kiccha Yet
+Note: /FSub is an alias  of /ForceSubscribe
+
+💥 Developed By @TheHacker90🔥 
  
 """
 __mod_name__ = "Force Subscribe"
