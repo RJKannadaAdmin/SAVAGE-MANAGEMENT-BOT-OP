@@ -65,12 +65,12 @@ from LEGEND.modules.helper_funcs.misc import paginate_modules
 from LEGEND.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """                   
-Hello there, I'm [𝐒𝐀𝐕𝐀𝐆𝐄 𝐁𝐎𝐓](https://telegra.ph/file/581295fcf392bb13dd0d6.jpg)
+Hello there, I'm [Anji Kiccha ⚔](https://telegra.ph/file/a480f899438b4f8fd0f8f.jpg)
 I am an anime Themed Group Managing Bot and I will help in managing your group\n
 
 ✪ Make sure you read *INFO* Section Below ✪ \n
 
-𝐌𝐘 𝐆𝐎𝐃 - [丂卂爪乇乇尺](t.me/SAMEER_795)
+Developed By - [Hacker](t.me/TheHacker90)
 """
               
 buttons = [
@@ -90,7 +90,7 @@ buttons = [
 
 
 HELP_STRINGS = f"""
-*Main Commands :* [Anji Kiccha](https://telegra.ph/file/177228bdfd09ae95d34a6.jpg)
+*Main Commands :* [Anji Kiccha](https://telegra.ph/file/c17e4e9ba98faaf13a608.jpg)
 ✪ /start: Starts me! You've probably already used this.
 ✪ /help: Click this, I'll let you know about myself!
 ✪ /donate: You can support my creater using this command.
