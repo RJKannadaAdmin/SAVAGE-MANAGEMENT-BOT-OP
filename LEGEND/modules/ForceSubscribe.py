@@ -1,18 +1,4 @@
-#    Copyright (C) 2020-2021 by @LEGENDX22
-#    This programme is a part of LEGEND TG bot project
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
+# credits @InukaAsith, @Mr_dark_prince
 
 import logging
 import time
@@ -26,9 +12,9 @@ from pyrogram.errors.exceptions.bad_request_400 import (
 )
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
 
-from LEGEND import DEV_USERS as SUDO_USERS, LEGENDX
-from LEGEND import pbot
-from LEGEND.modules.sql import forceSubscribe_sql as sql
+from MashaRoBot import DRAGONS as SUDO_USERS
+from MashaRoBot import pbot
+from MashaRoBot.modules.sql_extended import forceSubscribe_sql as sql
 
 logging.basicConfig(level=logging.INFO)
 
@@ -56,13 +42,13 @@ def _onUnMuteRequest(client, cb):
                 except UserNotParticipant:
                     client.answer_callback_query(
                         cb.id,
-                        text=f"❗ Hey @{channel} its  my channel  Join and press 'UnMute Me' button.",
+                        text=f"❗ Join our @{channel} channel and press 'UnMute Me' button.",
                         show_alert=True,
                     )
             else:
                 client.answer_callback_query(
                     cb.id,
-                    text="❗ contact Admin .",
+                    text="❗ You have been muted by admins due to some other reason.",
                     show_alert=True,
                 )
         else:
@@ -78,7 +64,7 @@ def _onUnMuteRequest(client, cb):
             else:
                 client.answer_callback_query(
                     cb.id,
-                    text="❗ press unmute me button and chat.",
+                    text="❗ Warning! Don't press the button when you cn talk.",
                     show_alert=True,
                 )
 
@@ -92,15 +78,15 @@ def _check_member(client, message):
         if (
             not client.get_chat_member(chat_id, user_id).status
             in ("administrator", "creator")
-            and not user_id == LEGENDX
+            and not user_id in SUDO_USERS
         ):
             channel = chat_db.channel
             try:
                 client.get_chat_member(channel, user_id)
             except UserNotParticipant:
                 try:
-                   sent_message = message.reply_text(
-                        "ಕ್ಷಮಿಸಿ {} 🙏 \n\n ** ನೀನು ಇನ್ನು ನಮ್ಮ @{} Channel ಚಾನಲ್ ಗೆ ಸೇರಿಕೊಂಡಿಲ್ಲ**  \n \nದಯವಿಟ್ಟು ನಮ್ಮ [Channel](https://t.me/{}) ಸೇರಿಕೊಳ್ಳಿ ಮತ್ತು ಕೆಳಗೆ ಕಾಣುತ್ತಿರುವ **UNMUTE ME** ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡಿ... \n \n ".format(
+                    sent_message = message.reply_text(
+                        "Welcome {} 🙏 \n **You havent joined our @{} Channel yet** 😭 \n \nPlease Join [Our Channel](https://t.me/{}) and hit the **UNMUTE ME** Button. \n \n ".format(
                             message.from_user.mention, channel, channel
                         ),
                         disable_web_page_preview=True,
@@ -125,20 +111,20 @@ def _check_member(client, message):
                     )
                 except ChatAdminRequired:
                     sent_message.edit(
-                        "❗ ** Admin +$$4&..**\n__ need Ban Permissions  Admin ද.. \n#Ending FSub...__"
+                        "❗ **Daisy is not admin here..**\n__Give me ban permissions and retry.. \n#Ending FSub...__"
                     )
 
             except ChatAdminRequired:
                 client.send_message(
                     chat_id,
-                    text=f"❗ **my@{channel}  Admin .**\n__::: Admin  Add .\n#Leaving this chat...__",
+                    text=f"❗ **I not an admin of @{channel} channel.**\n__Give me admin of that channel and retry.\n#Ending FSub...__",
                 )
 
 
 @pbot.on_message(filters.command(["forcesubscribe", "fsub"]) & ~filters.private)
 def config(client, message):
     user = client.get_chat_member(message.chat.id, message.from_user.id)
-    if user.status is "creator" or user.user.id in SUDO_USERS or user.user.id == LEGENDX:
+    if user.status is "creator" or user.user.id in SUDO_USERS:
         chat_id = message.chat.id
         if len(message.command) > 1:
             input_str = message.command[1]
@@ -189,30 +175,24 @@ def config(client, message):
                 message.reply_text("❌ **Force Subscribe is disabled in this chat.**")
     else:
         message.reply_text(
-            "❗ **Group Creator Required**\n__You Are Not A Owner Then Why Are You Telling Me To Do That 🤬 .__"
+            "❗ **Group Creator Required**\n__You have to be the group creator to do that.__"
         )
 
 
 __help__ = """
-*ForceSubscribe:*
-
-*Channel Manageer Inbuilt*
-✪ ඔයාගෙ ගෲප් එකේ මෙම්බර්ස්ල Channel එකක් හෝ කිහිපයක් Subscribe කරනකන් Message දාන එක නවත්තන්න මට පුලූවන්.
-✪ සාමාජිකයන් ඔබේ Channel  එකට සම්බන්ධ නොවූයේ නම් මම ඔවුන්ව නිශ්ශබ්ද කර channel එකට සම්බන්ධ වන ලෙස පවසන්න සහ බොත්තමක් එබීමෙන් ඔවුන්ව නිශ්ශබ්ද කරන්න මට පුලුවන්.
-
-*Setup*
-1) First of all add me in the group as admin with ban users permission and in the channel as admin.
-Note: Only creator of the group can setup me and i will not allow force subscribe again if not done so.
+*Force Subscribe:*
+• Senku can mute members who are not subscribed your channel until they subscribe
+• When enabled I will mute unsubscribed members and show them a unmute button. When they pressed the button I will unmute them
+*Setup* | *Only creator*
+• Add me in your group as admin
+• Add me in your channel as admin 
  
 *Commmands*
-✪ /ForceSubscribe - To get the current settings.
-✪ /ForceSubscribe no/off/disable - To turn of ForceSubscribe.
-✪ /ForceSubscribe {channel username} - To turn on and setup the channel.
-✪ /ForceSubscribe clear - To unmute all members who muted by me.
-
-Note: /FSub is an LEGENDBOT of /ForceSubscribe
-
-💭 Only on LEGENDBOT yet
- 
+• `/fsub` `{channel username}`*:* To turn on and setup the channel.
+ 💡Do this first...
+ • `/fsub`*:* To get the current settings.
+ • `/fsub disable`*:* To turn of ForceSubscribe..
+ 💡If you disable fsub, you need to set again for working.. /fsub {channel username} 
+ • `/fsub clear`*:* To unmute all members who muted by me.
 """
-__mod_name__ = "📢 Force Subscribe 💭"
+__mod_name__ = "F SUB"
