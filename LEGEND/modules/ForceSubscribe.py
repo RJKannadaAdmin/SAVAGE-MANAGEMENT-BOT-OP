@@ -78,7 +78,7 @@ def _onUnMuteRequest(client, cb):
             else:
                 client.answer_callback_query(
                     cb.id,
-                    text="❗This Button Isn't For You , Idiot 🤬.",
+                    text="❗ Idiot, Join Our Channel After Press This Button.",
                     show_alert=True,
                 )
 
