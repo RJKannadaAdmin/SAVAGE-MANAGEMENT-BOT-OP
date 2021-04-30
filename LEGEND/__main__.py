@@ -65,13 +65,11 @@ from LEGEND.modules.helper_funcs.misc import paginate_modules
 from LEGEND.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """                   
-Hello there[,](https://telegra.ph/file/a480f899438b4f8fd0f8f.jpg) I'm 𝑨𝒏𝒋𝒊 𝑲𝒊𝒄𝒄𝒉𝒂 ⚔
+Hello there[,](https://telegra.ph/file/e3dc99cdf4a662ceeb2aa.png) I'm 𖣘 The Boss 𖣘 ⚔
 
 I am an Anime Themed Group Managing Bot and I will help in managing your group\n
 
 ✪ Make sure you read *INFO* Section Below ✪ \n
-
-Developed By- [The NOoB](t.me/TheHacker90)
 """
               
 buttons = [
@@ -83,15 +81,15 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="⚔ Add Aɴᴊɪ Kɪᴄᴄʜᴀ to your group ⚔",
-            url="t.me/AnjiKicchaWlmBot?startgroup=true",
+            text="⚔ Add Ninja to your group ⚔",
+            url="t.me/TheBoss_GroupManager_Bot?startgroup=true",
         ),
     ],
 ]
 
 
 HELP_STRINGS = f"""
-*Main Commands :* [Anji Kiccha](https://telegra.ph/file/c17e4e9ba98faaf13a608.jpg)
+*Main Commands :* The Boss
 ✪ /start: Starts me! You've probably already used this.
 ✪ /help: Click this, I'll let you know about myself!
 ✪ /donate: You can support my creater using this command.
@@ -104,9 +102,7 @@ HELP_STRINGS = f"""
 )
 
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
-You can donate to the original writer's of the Base code,
-Support them [The Hacker](t.me/TheHacker90),"""
+DONATE_STRING = """No Need To Donate 😤 .,"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -363,9 +359,9 @@ def LEGEND_about_callback(update, context):
     if query.data == "aboutmanu_":
         query.message.edit_text(
             text=f"*😍 Hi again!  The name's {dispatcher.bot.first_name} 😍 \n\nAs  You I'm a next generational group management bot developed by @TheHacker90.* "
-            f"\n\n 🔥 Join [SUPPORT GROUP](https://t.me/AnjiKicchaGroup) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
+            f"\n\n 🔥 Join [SUPPORT GROUP](https:/t.me/Kannada_Hd_FilmsRequest) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
             f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
-            f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)](https://telegra.ph/file/177228bdfd09ae95d34a6.jpg)"
+            f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features :) "
             f"\n\n👇 You Can Know More About Me By Clicking The Below Buttons 👇",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -422,8 +418,8 @@ def LEGEND_about_callback(update, context):
         query.message.edit_text(
             text=f"*{dispatcher.bot.first_name} Is the redisigned version of Daisy and Naruto for the best performance.*"
             f"\n\nBased on [Suzuya Bot](https://github.com/Godzilla-0/Suzuya_ProBot)."
-            f"\n\n{dispatcher.bot.first_name}'s source code was rewritten by @TheHacker90"
-            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @AnjiKicchaGroup.",
+            f"\n\n{dispatcher.bot.first_name}'s source code was rewritten by @Kannada_HD_Filmsrequest"
+            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @Kannada_HD_FilmsRequest.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -481,11 +477,11 @@ def LEGEND_about_callback(update, context):
             f"\n✪ We always respect your privacy \n  We never log into bot's api and spying on you \n  We use a encripted database \n  Bot will automatically stops if someone logged in with api."
             f"\n✪ Always try to keep credits, so \n  This hardwork is done by @TheHacker90 spending many sleepless nights.. So, Respect it."
             f"\n✪ Some modules in this bot is owned by different authors, So, \n  All credits goes to them \n  Also for <b>Paul Larson for Marie</b>."
-            f"\n✪ If you need to ask anything about \n  this bot, Go @AnjikicchaGroup."
+            f"\n✪ If you need to ask anything about \n  this bot, Go @Kannada_HD_FilmsRequest."
             f"\n✪ If you asking nonsense in Support \n  Chat, you will get warned/banned."
             f"\n✪ All api's we used owned by originnal authors \n  Some api's we use Free version \n  Please don't overuse AI Chat."
             f"\n✪ We don't Provide any support to forks,\n  So these terms and conditions not applied to forks \n  If you are using a fork of SAVAGE Bot we are not resposible for anything."
-            f"\n\nFor any kind of help, related to this bot, Join @AnjikicchaGroup."
+            f"\n\nFor any kind of help, related to this bot, Join @Kannada_HD_FilmsRequest."
             f"\n\n<i>Terms & Conditions will be changed anytime</i>\n",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
@@ -541,7 +537,7 @@ def get_help(update, context):
                     [
                         InlineKeyboardButton(
                             text="Support Chat",
-                            url="https://t.me/AnjikicchaGroup".format(SUPPORT_CHAT),
+                            url="https://t.me/Kannada_HD_FilmsRequest".format(SUPPORT_CHAT),
                         )
                     ],
                 ]
