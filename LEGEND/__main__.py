@@ -396,7 +396,7 @@ def LEGEND_about_callback(update, context):
         query.message.edit_text(
             text=f"* ｢ BASIC HELP 」*"
             f"\nIf You Can Also Add {dispatcher.bot.first_name} To Your Chats By Clicking [Here](http://t.me/{dispatcher.bot.username}?startgroup=true) And Selecting Chat. \n"
-            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [support](https://t.me/AnjikicchaGroup).\n"
+            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining 👉 [This Group](t.me/Kannada_HD_FilmsRequest).\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
