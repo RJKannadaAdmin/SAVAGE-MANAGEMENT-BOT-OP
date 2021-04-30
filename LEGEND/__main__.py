@@ -81,7 +81,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="⚔ Add Ninja to your group ⚔",
+            text="⚔ Add The Boss to your group ⚔",
             url="t.me/TheBoss_GroupManager_Bot?startgroup=true",
         ),
     ],
@@ -89,7 +89,7 @@ buttons = [
 
 
 HELP_STRINGS = f"""
-*Main Commands :* The Boss
+*Main Commands :* [The Boss](https://telegra.ph/file/c2226f2435b53ad78be3b.png)
 ✪ /start: Starts me! You've probably already used this.
 ✪ /help: Click this, I'll let you know about myself!
 ✪ /donate: You can support my creater using this command.
@@ -102,7 +102,7 @@ HELP_STRINGS = f"""
 )
 
 
-DONATE_STRING = """No Need To Donate 😤 .,"""
+DONATE_STRING = """No Need To Donate 😤 , I'm Rich .,"""
 
 IMPORTED = {}
 MIGRATEABLE = []
